@@ -10,7 +10,7 @@ spec:
     args: [ "while true; do sleep 30 ; done;" ]
     volumeMounts:
        - name: config-volume
-         mountpath: /etc/config
+         mountPath: /etc/config
  volumes:
   - name: config-volume
     configMap:
