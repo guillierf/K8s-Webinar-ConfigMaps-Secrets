@@ -45,6 +45,27 @@ more log.location
 
 
 ## Demo2-ConfigMaps:
+This examples shows how to inject Redis config using Configmap. Injection is done thru file system.
+
+Create ConfigMap using Interactive mode:
+
+```
+kubectl create configmap example-redis-config --from-file=redis-config
+kubectl get cm
+```
+
+Create Redis POD:
+```
+kubectl create -f redis.yml
+```
+
+Check:
+```
+kubectl exec -ti redis sh
+ redis-cli
+  CONFIG GET maxmemory
+  CONFIG GET maxmemory-policy
+```
 
 
 ## Demo3-Secrets:
