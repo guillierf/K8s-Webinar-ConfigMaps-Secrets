@@ -3,6 +3,11 @@
 ## Demo1-ConfigMaps:
 Demonstrates use of ConfigMaps for injecting configs via CLI VAR, env VAR and File System
 
+Go to directory:
+```
+cd  Deploy-Kubernetes/Demo1-ConfigMaps
+```
+
 Deploy ConfigMaps:
 ```
 kubectl create -f configmap.yml
@@ -47,6 +52,11 @@ more log.location
 ## Demo2-ConfigMaps:
 This examples shows how to inject Redis config using Configmap. Injection is done thru file system.
 
+Go to directory:
+```
+cd  Deploy-Kubernetes/Demo2-ConfigMaps
+```
+
 Create ConfigMap using Interactive mode:
 
 ```
@@ -70,5 +80,16 @@ kubectl exec -ti redis sh
 
 ## Demo3-Secrets:
 
+Go to directory:
+```
+cd  Deploy-Kubernetes/Demo3-Secrets
+```
+
 
 ## Demo4-Secrets
+
+Go to directory:
+```
+cd  Deploy-Kubernetes/Demo4-Secrets
+```
+
