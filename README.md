@@ -80,12 +80,33 @@ kubectl exec -ti redis sh
 
 ## Demo3-Secrets:
 
+This examples shows how to inject Secrets like username and password to Redis using File System.
+
 Go to directory:
 ```
 cd  Deploy-Kubernetes/Demo3-Secrets
 ```
 
+Create Secrets:
+```
+kubectl create secret generic dbsecret --from-file=./username.txt --from-file=./password.txt
+```
 
+Create POD using the Secrets inside:
+```
+kubectl create -f pod-secret.yml
+```
+
+Result
+
+```
+kubectl exec -ti secret-pod sh
+ cd /etc/foo
+ more password.txt
+ more username.txt
+```
+
+ 
 ## Demo4-Secrets
 
 Go to directory:
