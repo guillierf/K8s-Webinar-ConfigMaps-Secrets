@@ -109,8 +109,32 @@ kubectl exec -ti secret-pod sh
  
 ## Demo4-Secrets
 
+This examples shows how to inject Secrets like username and password to Redis using ENV VAR.
+
 Go to directory:
 ```
 cd  Deploy-Kubernetes/Demo4-Secrets
 ```
 
+Create Secrets:
+```
+kubectl create -f my-secret.yml
+```
+
+Create POD using the Secrets inside:
+```
+kubectl create -f pod-secret-env.yml 
+```
+
+Result:
+
+```
+kubectl exec -ti secret-env-pod sh
+ env
+```
+
+You should be able to see:
+SECRET_USERNAME=admin
+SECRET_PASSWORD=mypassword
+
+ 
