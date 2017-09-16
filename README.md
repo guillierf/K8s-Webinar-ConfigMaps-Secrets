@@ -4,7 +4,8 @@
 Demonstrates use of ConfigMaps for injecting configs via CLI VAR, env VAR and File System
 
 Deploy ConfigMaps:
-```kubectl create -f configmap.yml
+```
+kubectl create -f configmap.yml
 ```
 
 Deploy POD pod-cmd (injection via CLI VAR):
